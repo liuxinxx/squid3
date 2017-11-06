@@ -8,7 +8,9 @@ echo Y | sudo apt-get install apache2-utils
 cd /etc/squid3
 sudo rm -f squid3.conf
 curl -O 'https://raw.githubusercontent.com/myvary/squid3/master/squid.conf'
-echo mancao | sudo htpasswd  -c  /etc/squid3/passwd  mc_proxy
-echo mancao
+(echo "mancao"
+sleep 1
+echo "mancao")| sudo htpasswd  -c  /etc/squid3/passwd  mc_proxy
+
 sudo squid3 -k reconfigur
 sudo service squid3 restart
