@@ -1,7 +1,6 @@
 #!/bin/sh
 sudo chmod u+x ./install_squid.sh
 cd ~
-sudo apt-get update
 echo Y | sudo apt-get install curl
 echo Y | sudo apt-get install squid3
 echo Y | sudo apt-get install apache2-utils
