@@ -10,6 +10,7 @@ curl -O 'https://raw.githubusercontent.com/myvary/squid3/master/squid.conf'
 sudo htpasswd  -c  /etc/squid3/passwd  mc_proxy
 expect "New password:"
 send "mancao\r"
+expect "Re-type new password:"
 send "mancao\r"
 sudo squid3 -k reconfigur
 sudo service squid3 restart
